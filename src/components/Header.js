@@ -1,0 +1,62 @@
+import React from "react";
+import logo from "../assets/images/logo.png";
+import image1 from "../assets/images/hand-on-mobile.png";
+import verifyIcon from "../assets/images/verify.png";
+import headerBackground1 from "../assets/images/header-background1.png";
+import headerBackground2 from "../assets/images/header-background2.png";
+import Navbar from "./Navbar";
+
+function Header() {
+  return (
+    <header id="home">
+    
+      <div className="header-wrapper">
+        <div className="header-top">
+          <div className="logo-wrap">
+            <img className="logo" src={logo} alt="logo" />
+            <p>
+              BaseLink <br />
+              Academy{" "}
+            </p>
+          </div>
+          <Navbar />
+          <button className="register-button desktop">Register</button>
+        </div>
+        <div className="header-content">
+          <div className="header-content-left">
+            <h1>
+              Empower Your <span>Future</span> with In-Demand <span>Creative </span>Creative and Technical Skills
+            </h1>
+            <p>
+              Join Baselinks Academy and unlock a world of opportunities with
+              our robust and user-friendly online learning platform
+            </p>
+            <div className="header-bottom">
+              <button className="browse-button">Browse courses</button>
+              <button className="sign-up-button">Sign up</button>
+            </div>
+            <p className="coach-text desktop">
+              <img className="verifyIcon" src={verifyIcon} alt="verify-icon" />
+              Skilled coach
+            </p>
+          </div>
+          <div className="header-content-right">
+            <img className="hand-on-phone" src={image1} alt="hand-on-phone" />
+            <img
+              className="header-background1"
+              src={headerBackground1}
+              alt="background"
+            />
+          </div>
+        </div>
+      </div>
+      <img
+        className="header-background2"
+        src={headerBackground2}
+        alt="background2"
+      />
+    </header>
+  );
+}
+
+export default Header;
