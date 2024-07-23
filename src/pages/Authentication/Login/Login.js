@@ -105,8 +105,8 @@ function Login() {
         </form>
       </div>
 
-      <div className="login-bottom mobile">
-        <img  className="login-bottom-arrow" src={backArrow} alt="back arrow" />
+      <div className="login-bottom mobile" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+        <img className="login-bottom-arrow" src={backArrow} alt="back arrow" />
         <p>Return to home</p>
       </div>
       <LoginBoard className="login-component" />

@@ -640,6 +640,10 @@ button:focus {
     margin: 3em;
     font-size: 13px;
   }
+
+  .login-bottom > .signin-bottom-arrow{
+    margin-left: -5em;
+  }
 }
 
 @media only screen and (width > 600px) and (width < 1245px) {

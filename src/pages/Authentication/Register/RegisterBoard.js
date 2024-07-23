@@ -41,13 +41,16 @@ function RegisterBoard() {
         </div>
 
         <img className="auth-wallpaper" src={authWallpaper} alt="/" />
-        <button
-          className="return-home"
-          onClick={() => navigate('/')} // Navigate to home page
+        <div
+          className="return-home login-return-to-home"
+          onClick={() => navigate('/')}
+          style={{ cursor: 'pointer' }}
         >
-          <img className="back-icon" src={backArrow} alt="back arrow" />
-          <p>Return to home</p>
-        </button>
+          <p>
+            <img className="back-icon" src={backArrow} alt="/" />
+            Return to home
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -347,7 +347,7 @@ p {
 }
 
 .login-return-to-home {
-  margin-top: 30%;
+  margin-top: 50%;
   margin-left: -10%;
 }
 
@@ -355,9 +355,7 @@ p {
   margin-top: -1em;
 }
 
-.forget-password {
-  margin-left: 15%;
-}
+
 .return-home {
   margin-left: -1em;
 }
