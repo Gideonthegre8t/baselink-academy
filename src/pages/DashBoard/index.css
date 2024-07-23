@@ -295,7 +295,6 @@ ul li::marker {
   margin-left: -8em;
 }
 
-
 .pd-course-icon {
   position: absolute;
   margin-left: -8em;
@@ -654,15 +653,16 @@ input {
     margin-left: -2.5em;
   }
 
-  .course-icon,  .pd-course-icon{
+  .course-icon,
+  .pd-course-icon {
     margin-left: -9%;
   }
 
-  .my-course-icon,   .completed-course-icon  {
+  .my-course-icon,
+  .completed-course-icon {
     position: absolute;
     margin-left: -9%;
   }
- 
 
   .enroll {
     width: 120px;
@@ -802,8 +802,6 @@ input {
     margin-left: 0px;
   }
 
-  
-
   .enroll {
     position: relative;
     width: 50px;
@@ -916,6 +914,11 @@ input {
     margin-top: 1em;
   }
 
+  .over-view-list {
+    margin-left: -0em;
+    width: 110%;
+  }
+
   .recommended-text {
     font-size: 16px;
     font-weight: 400;
@@ -1021,17 +1024,15 @@ input {
     width: 100%;
     margin-top: -8px;
   }
-  .course-icon,  .pd-course-icon{
+  .course-icon,
+  .pd-course-icon {
     margin-left: -18%;
   }
 
-
-   .my-course-icon,  .completed-course-icon{
+  .my-course-icon,
+  .completed-course-icon {
     margin-left: -14%;
   }
-
-
-
 
   .enroll {
     width: 100px;
@@ -1126,9 +1127,7 @@ input {
 
   .overview-prefix > img {
     margin-left: -18%;
-
   }
-
 }
 
 @media only screen and (width < 460px) {
@@ -1190,8 +1189,6 @@ input {
     margin-right: -5%;
   }
 
-  
-
   .course-icon {
     margin-left: -18px;
     width: 3%;
@@ -1227,7 +1224,6 @@ input {
     max-width: 3%;
   }
   .completed-course-icon {
-
     margin-left: -14%;
     max-width: 3%;
   }
@@ -1263,8 +1259,6 @@ input {
     height: 32px;
   }
 
- 
-
   .personal-information,
   .contact-information {
     width: 125%;
@@ -1278,9 +1272,6 @@ input {
   .user-info-label {
     margin-left: -11em;
   }
-
- 
-
 }
 
 @media only screen and (width < 450px) {
@@ -1344,12 +1335,11 @@ input {
     margin-left: -2em;
   }
 
-  .my-course-icon,  .completed-course-icon {
+  .my-course-icon,
+  .completed-course-icon {
     max-width: 5%;
     margin-left: -10%;
   }
-
-  
 
   .my-course-content-top {
     padding: 0;
@@ -1416,6 +1406,15 @@ input {
   .overview-prefix > img {
     margin-left: -23%;
     margin-top: -1px;
+  }
+}
 
+@media only screen and (width < 381px) {
+  .over-view-list {
+    margin-left: -3.5em;
+  }
+
+  form {
+    gap: 8em;
   }
 }

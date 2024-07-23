@@ -12,15 +12,11 @@ function Header() {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleRegisterClick = () => {
-    navigate('/sign-up'); // Navigate to /sign-up route
-  };
-
-  const handleBrowseCoursesClick = () => {
-    navigate('/dashboard'); // Navigate to /dashboard route
+    navigate("/sign-up"); // Navigate to /sign-up route
   };
 
   const handleLoginClick = () => {
-    navigate('/login'); // Navigate to /login route
+    navigate("/login"); // Navigate to /login route
   };
 
   const buttonVariants = {
@@ -61,7 +57,8 @@ function Header() {
         <div className="header-content">
           <div className="header-content-left">
             <h1>
-              Empower Your <span>Future</span> with In-Demand <span>Creative </span>Creative and Technical Skills
+              Empower Your <span>Future</span> with In-Demand{" "}
+              <span>Creative </span>Creative and Technical Skills
             </h1>
             <p>
               Join Baselinks Academy and unlock a world of opportunities with
@@ -70,7 +67,7 @@ function Header() {
             <div className="header-bottom">
               <motion.button
                 className="browse-button"
-                onClick={handleBrowseCoursesClick}
+                onClick={handleLoginClick}
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="click"

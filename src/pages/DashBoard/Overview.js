@@ -92,7 +92,7 @@ function Overview() {
           Recommended courses{" "}
         </p>
         <div className="overview-bottom-content">
-          <ul>
+          <ul className="over-view-list">
             <li>
               <span>Project management</span>: Project management is the
               application of knowledge, skills, tools, and techniques to project
