@@ -130,7 +130,7 @@ textarea {
   display: flex;
   justify-content: center;
   gap: 5px;
-  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .have-account > p,

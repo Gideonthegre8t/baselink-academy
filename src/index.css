@@ -13,17 +13,6 @@
   src: url(../src/assets/fonts/Inknut_Antiqua/InknutAntiqua-Regular.ttf);
 }
 
-h1 span {
-  color: #007bff;
-
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 57.55px;
-  text-align: left;
-}
-.hidden {
-  display: none;
-}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -35,6 +24,18 @@ body {
   color: black;
   font-family: "Arial";
 }
+h1 span {
+  color: #007bff;
+
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.55px;
+  text-align: left;
+}
+.hidden {
+  display: none;
+}
+
 
 img {
   max-width: 100%;
@@ -168,6 +169,10 @@ button:focus {
   outline: none;
 }
 
+#contact{
+  background: #021f3d;
+  color:#fff
+}
 @media only screen and (width > 1450px) {
   .navigator {
     width: 60%;
