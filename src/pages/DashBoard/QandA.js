@@ -17,7 +17,7 @@ function QandA() {
 
     // Simulate an API response for demo purposes
     setTimeout(() => {
-      setAnswer("This is a simulated answer. Replace with your own logic.");
+      setAnswer("Not yet live");
       setLoading(false);
     }, 1000);
   };
