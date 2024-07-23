@@ -76,7 +76,7 @@ body {
   gap: 10px;
   border-radius: 10px;
   margin: 0 auto;
-  background: #021f3d;
+
 }
 
 .dash-item-img {
@@ -109,6 +109,7 @@ body {
   padding: 2em;
   gap: 1em;
   margin-left: 30%;
+  margin-top: 100%;
 }
 
 .dashboard-bottom > p {
@@ -319,6 +320,7 @@ ul li::marker {
   margin-top: 1em;
   display: flex;
   padding: 1em;
+  margin-left: 2em;
 }
 
 .browse-content-bottom {
@@ -358,7 +360,7 @@ ul li::marker {
   width: 154px;
   height: 41px;
   padding-left: 60px;
-  padding-top: 5px;
+  padding-top: 12px;
   gap: 10px;
   border: 5px;
   gap: 10px;
@@ -529,20 +531,26 @@ input {
   margin-top: 14em;
 }
 
+.dashboard-item-card.active-card {
+  background-color: #021f3d;
+  color: white; /* Optional: change text color to white for better contrast */
+}
+
+
 @media only screen and (width > 1440px) {
   .browse-course-header {
     margin: 2em 9em;
   }
 
-  .completed-course-icon {
-    position: absolute;
-    margin-left: -2.5em;
-  }
 
   .course-icon,
   .my-course-icon {
     position: absolute;
-    margin-left: -1em;
+ margin-left: -7em;
+  }
+  
+  .pd-course-icon {
+    margin-left: -7em;
   }
 
   .course-title {
@@ -550,9 +558,6 @@ input {
     height: 22px;
   }
 
-  .pd-course-icon {
-    margin-left: 0.8em;
-  }
 
   .course-title > p {
     line-height: 25px;
@@ -563,14 +568,16 @@ input {
     gap: 5em;
   }
 
-  .course-icon,
-  .my-course-icon {
-    margin-left: -2em;
+  .note{
+    margin-left: 9em;
   }
 
-  .pd-course-icon {
+  .browse-content-top{
     margin-left: -2em;
+    
   }
+
+
 }
 
 @media only screen and (width > 600px) {
@@ -667,7 +674,7 @@ input {
   .enroll {
     width: 120px;
     height: 31px;
-    padding: 5px 50px;
+    padding: 8px 45px;
   }
 
   select {
@@ -807,7 +814,7 @@ input {
     width: 50px;
     height: 29px;
     margin-left: 30%;
-    padding: 5px 12px;
+    padding: 6px 9px;
   }
 
   .personal-information,

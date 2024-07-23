@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion"; // Import framer-motion
+import { motion } from "framer-motion";
 import logo from "../../assets/images/logo.png";
 import overviewImg from "../../../src/assets/images/overview.png";
 import questionMark from "../../../src/assets/images/message-question.png";
@@ -75,7 +75,7 @@ function UserDashboard() {
 
           <div className="dashboard-content">
             <motion.div
-              className="dashboard-item-card"
+              className={`dashboard-item-card ${activeComponent === "Overview" ? 'active-card' : ''}`}
               onClick={() => handleItemClick("Overview", overviewRef)}
               variants={itemVariants}
               whileHover="hover"
@@ -86,7 +86,7 @@ function UserDashboard() {
               </p>
             </motion.div>
             <motion.div
-              className="dashboard-item-card"
+              className={`dashboard-item-card ${activeComponent === "BrowseCourse" ? 'active-card' : ''}`}
               onClick={() => handleItemClick("BrowseCourse", browseCourseRef)}
               variants={itemVariants}
               whileHover="hover"
@@ -97,7 +97,7 @@ function UserDashboard() {
               </p>
             </motion.div>
             <motion.div
-              className="dashboard-item-card"
+              className={`dashboard-item-card ${activeComponent === "MyCourses" ? 'active-card' : ''}`}
               onClick={() => handleItemClick("MyCourses", myCoursesRef)}
               variants={itemVariants}
               whileHover="hover"
@@ -108,7 +108,7 @@ function UserDashboard() {
               </p>
             </motion.div>
             <motion.div
-              className="dashboard-item-card"
+              className={`dashboard-item-card ${activeComponent === "UserInfomation" ? 'active-card' : ''}`}
               onClick={() => handleItemClick("UserInfomation", userInformationRef)}
               variants={itemVariants}
               whileHover="hover"
