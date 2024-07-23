@@ -153,6 +153,20 @@ li {
   font-size: 13px;
 }
 
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  outline: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
 @media only screen and (width > 1450px) {
   .navigator {
     width: 60%;
