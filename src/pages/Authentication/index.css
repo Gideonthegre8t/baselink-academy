@@ -38,17 +38,19 @@
 }
 
 .align-password {
-  margin-left: -24%;
+  margin-left: -15%;
 }
 
 .password-container {
-  position: relative;
+  input {
+    margin-left: -22%;
+  }
 }
 .password-container img {
   position: absolute;
   cursor: pointer;
-  left: 82%;
-  margin-top: -3%;
+  left: 75%;
+  margin-top: 3%;
 }
 
 input::placeholder {
@@ -60,7 +62,7 @@ input::placeholder {
 form {
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 7em;
   margin-top: 4em;
 }
 
@@ -72,6 +74,25 @@ label {
   line-height: 18.4px;
   text-align: left;
   margin-top: -2em;
+}
+
+.login-form-group {
+  label {
+    margin-top: 0em;
+  }
+}
+
+.login-form-group {
+  input {
+    position: absolute;
+    margin-left: -15%;
+    width: 394px;
+    height: Fixed (48px) px;
+    padding: 4px 47px 4px 47px;
+    border-radius: 10px;
+    border: 1px solid #007bff;
+    margin-top: 1em;
+  }
 }
 
 input,
@@ -190,8 +211,7 @@ img {
   font-weight: 400;
   line-height: 18.4px;
   color: #007bff;
-  margin-left: -60%;
-  margin-top: -2%;
+  text-align: center;
 }
 
 .dont-have-account {
@@ -217,9 +237,7 @@ img {
 
 .board-content-wrapper {
   position: relative;
-
   gap: 20px;
-  opacity: 0px;
   margin-left: 1em;
 }
 
@@ -340,6 +358,13 @@ p {
 .forget-password {
   margin-left: 15%;
 }
+.return-home {
+  margin-left: -1em;
+}
+.back-icon {
+  position: absolute;
+  margin-left: -2em;
+}
 
 @media only screen and (width > 600px) and (width < 1240px) {
   .auth-logo > img {
@@ -363,6 +388,14 @@ p {
     text-align: center;
     margin: 0 5px;
   }
+  .login-form-group {
+    margin-left: -30%;
+  }
+
+  .login-form-group > label {
+    margin-left: -6em;
+  }
+
   .forget-password {
     margin-top: -1em;
   }
@@ -370,8 +403,8 @@ p {
   .password-container img {
     position: absolute;
     cursor: pointer;
-    left: 80%;
-    margin-top: -5.5%;
+    left: 70%;
+    margin-top: 4%;
   }
 
   .auth-wallpaper {
@@ -396,6 +429,15 @@ p {
     max-width: 250%;
     margin-left: -87.5%;
   }
+
+  .login-form-group {
+    margin: 0 auto;
+    width: 100%;
+
+    input {
+      width: 30%;
+    }
+  }
 }
 
 @media only screen and (width > 1500px) {
@@ -409,11 +451,30 @@ p {
     margin-top: -1em;
     margin-left: 57%;
   }
+
+  .login-form-group {
+    margin: 0 auto;
+    width: 100%;
+
+    input {
+      width: 30%;
+    }
+  }
+
+  .password-container > img {
+    margin-top: 2%;
+    margin-left: -1%;
+  }
 }
 
 @media only screen and (width < 890px) {
   .align-password {
     margin-left: -21%;
+  }
+
+  .password-container img {
+    left: 80%;
+    margin-top: 6%;
   }
 }
 
@@ -434,6 +495,14 @@ p {
     margin-left: -12em;
   }
 
+  .login-form-group {
+    margin-left: -50%;
+  }
+
+  .login-form-group > label {
+    margin-left: -6em;
+  }
+
   .forget-password {
     margin-top: -2em;
     margin-left: 0em;
@@ -442,8 +511,8 @@ p {
   .password-container img {
     position: absolute;
     cursor: pointer;
-    left: 79%;
-    margin-top: -6%;
+    left: 72%;
+    margin-top: 4.5%;
   }
 
   .sign-up-button {
@@ -467,11 +536,6 @@ p {
     line-height: 18.4px;
     margin-top: 2em;
     margin: 0 auto;
-  }
-
-  input,
-  textarea {
-    height: 47px;
   }
 
   .register-board {
@@ -512,11 +576,11 @@ p {
     font-size: 10px;
     font-weight: 700;
     line-height: 25.75px;
-    text-align: center;
+    text-align: left;
   }
   .login-bottom-arrow {
     position: absolute;
-    margin-left: -8%;
+    margin-left: -5%;
   }
 
   #sign-up {
@@ -558,6 +622,22 @@ p {
     width: 120px;
     height: 45px;
   }
+
+  .login-form-group {
+    margin-left: -14%;
+    width: 60%;
+  }
+
+  .password-container > img {
+    margin-top: 6%;
+  }
+
+  .login-form-group > label {
+    margin-left: -4em;
+  }
+  .login-bottom-arrow {
+    margin-left: -8%;
+  }
 }
 
 @media only screen and (width < 381px) {
@@ -591,7 +671,27 @@ p {
     position: absolute;
     cursor: pointer;
     left: 79%;
-    margin-top: -6%;
+    margin-top: 7%;
+  }
+
+  .login-form-group {
+    margin-left: -15%;
+    max-width: 80%;
+    margin-top: -2em;
+  }
+
+  .login-form-group > label {
+    margin-left: -3em;
+  }
+
+  .login-button {
+    margin: 0 auto;
+    margin-top: -3em;
+  }
+
+  .login-bottom-arrow {
+    position: absolute;
+    margin-left: -9%;
   }
 }
 
@@ -602,14 +702,16 @@ p {
     margin-top: -4px;
   }
 
+  .login-form-group {
+    margin-top: -3em;
+  }
+
   .forget-password {
     margin-left: -30%;
   }
 
   .password-container img {
-    position: absolute;
-    cursor: pointer;
     left: 76%;
-    margin-top: -10%;
+    margin-top: 8%;
   }
 }

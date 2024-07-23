@@ -1,54 +1,46 @@
-import './index.css';
-// import { Routes, Route } from "react-router-dom";
-// import Header from './components/Header';
-// import About from './components/About';
-// import Courses from './components/Courses';
-// import Testimony from './components/Testimony';
-// import Footer from './components/Footer';
-// import Register from '../src/pages/Authentication/Register/Register';
-// import Success from './pages/Authentication/Register/Success';
-// import Login from './pages/Authentication/Login/Login';
-// import RegisterBoard from './pages/Authentication/Register/RegisterBoard';
-// import LoginBoard from './pages/Authentication/Login/LoginBoard';
-// import DashBoard from './pages/DashBoard/DashBoard';
-// import Overview from './pages/DashBoard/Overview';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Header from './components/Header';
+import About from './components/About';
+import Courses from './components/Courses';
+import Testimony from './components/Testimony';
+import Footer from './components/Footer';
+import Register from './pages/Authentication/Register/Register';
+import Success from './pages/Authentication/Register/Success';
+import Login from './pages/Authentication/Login/Login';
+import QandA from './pages/DashBoard/QandA';
+import UserDashboard from './pages/DashBoard/UserDashboard';
+import Overview from './pages/DashBoard/Overview';
 import BrowseCourse from './pages/DashBoard/BrowseCourse';
-import MyCourse from './pages/DashBoard/MyCourses';
-
-
+import MyCourses from './pages/DashBoard/MyCourses';
+import UserInfomation from './pages/DashBoard/UserInfomation';
 
 function App() {
   return (
     <div className="App">
-      {/* <Header />
       <Routes>
         <Route path="/" element={
           <>
+            <Header />
             <About />
             <Courses />
             <Testimony />
+            <Footer />
           </>
         } />
-        <Route path="/about" element={<About />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/testimony" element={<Testimony />} />
+        <Route path="/sign-up" element={<Register />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<UserDashboard />}>
+          <Route path="overview" element={<Overview />} />
+          <Route path="browse-course" element={<BrowseCourse />} />
+          <Route path="my-courses" element={<MyCourses />} />
+          <Route path="user-information" element={<UserInfomation />} />
+        </Route>
+        <Route path="/q-and-a" element={<QandA />} />
       </Routes>
-      <Footer /> */}
-
-     {/* <Register />  */}
-      {/* <Success /> */}
-      {/* <Login /> */}
-   {/* <RegisterBoard /> */}
-   {/* <LoginBoard /> */}
-   {/* <DashBoard /> */}
-   {/* <Overview /> */}
-   <BrowseCourse />
-   <MyCourse />
-
     </div>
   );
 }
 
 export default App;
-
-

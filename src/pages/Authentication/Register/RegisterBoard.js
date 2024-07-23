@@ -4,8 +4,11 @@ import "../../../pages/Authentication/index.css";
 import authAsset from "../../../assets/images/auth-asset.png";
 import authWallpaper from "../../../assets/images/auth-wallpaper.png";
 import backArrow from "../../../assets/images/arrow-left.png";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 function RegisterBoard() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   return (
     <section id="authentication-board" className="register-board">
       <div className="auth-container">
@@ -14,7 +17,7 @@ function RegisterBoard() {
             <img src={logo} alt="logo" />
             <p>
               BaseLink <br />
-              Academy{" "}
+              Academy
             </p>
           </div>
 
@@ -23,14 +26,14 @@ function RegisterBoard() {
             <div className="board-content">
               <div className="board-detail">
                 <h4>Your details</h4>
-                <p>Name,username, password </p>
+                <p>Name, username, password</p>
               </div>
               <div className="board-detail">
                 <h4>Your details</h4>
                 <p>Enter verification code</p>
               </div>
               <div className="board-detail">
-                <h4>Welcome to Baselink Academy </h4>
+                <h4>Welcome to Baselink Academy</h4>
                 <p>Enter verification code</p>
               </div>
             </div>
@@ -38,15 +41,16 @@ function RegisterBoard() {
         </div>
 
         <img className="auth-wallpaper" src={authWallpaper} alt="/" />
-        <div className="return-home">
-          <p>
-            {" "}
-            <img className="back-icon" src={backArrow} alt="/" />
-            Return to home
-          </p>
-        </div>
+        <button
+          className="return-home"
+          onClick={() => navigate('/')} // Navigate to home page
+        >
+          <img className="back-icon" src={backArrow} alt="back arrow" />
+          <p>Return to home</p>
+        </button>
       </div>
     </section>
   );
 }
+
 export default RegisterBoard;

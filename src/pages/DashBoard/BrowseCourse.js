@@ -1,16 +1,24 @@
 import React from "react";
 import courseIcon from "../../assets/images/my-course.png";
 import "../DashBoard/index.css";
+import browseCourse from "../../../src/assets/images/search.png";
 
 function BrowseCourse() {
   return (
-    <section className="browse-course">
+    <section id="browse-course" className="browse-course">
+
+<div className="overview-prefix prefix">
+  <img src={browseCourse} alt="/" />
+<h4>My courses</h4>
+</div>
       <div className="browse-course-wrapper">
         <div className="browse-course-header ">
           {" "}
           <h2>Welcome,Gideon!</h2>
-          <p>Here's what we have for you</p>
+          
         </div>
+        <p className="note">For any question regarding any course please send a question in the Q & A section</p>
+
         <div className="browse-course-content">
           <div className="browse-content-top">
             <div className="course-title">

@@ -4,8 +4,10 @@ import { auth } from "../../../firebase"; // Ensure the path is correct
 import eye from "../../../assets/images/eye.png";
 import '../index.css';
 import logo from "../../../assets/images/logo.png";
-import backArrow from "../../../assets/images/arrow-left.png";
 import RegisterBoard from "./RegisterBoard";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import backArrow from "../../../assets/images/arrow-left.png";
+
 
 function Register() {
   const [form, setForm] = useState({
@@ -21,6 +23,8 @@ function Register() {
   const [passwordError, setPasswordError] = useState("");
   const [usernameError, setUsernameError] = useState("");
   const usernames = ["existingUser1", "existingUser2"]; // Simulating existing usernames
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const validatePassword = (password) => {
     if (password.length < 9) {
@@ -74,19 +78,18 @@ function Register() {
 
   return (
     <section id="sign-up">
-      <div className=" sign-up-logo mobile">
-            
-            <p className="logo-text sign-up-text">
-              <img  src={logo} alt="logo" />
+       <div className="logo-wrap mobile dashboard-logo">
+            <img className="logo user-dasboard-logo" src={logo} alt="logo" />
+            <p>
               BaseLink <br />
-              Academy{" "}
+              Academy
             </p>
-          </div>  
+          </div>
       <div className="sign-up-wrapper">
         <h2>Welcome to Baselink Academy</h2>
         <p>{message}</p>
-        <form className="registration-form " onSubmit={handleSubmit}>
-          <div className="form-group">
+        <form className="registration-form" onSubmit={handleSubmit}>
+          <div className="login-form-group signup-form-group">
             <label>Full Name</label>
             <input
               type="text"
@@ -97,7 +100,7 @@ function Register() {
               placeholder="Sarah Cornor"
             />
           </div>
-          <div className="form-group">
+          <div className="login-form-group">
             <label>Email</label>
             <input
               type="email"
@@ -108,7 +111,7 @@ function Register() {
               placeholder="SarahConnor@outlook.com"
             />
           </div>
-          <div className="form-group">
+          <div className="login-form-group">
             <label>Phone</label>
             <input
               type="tel"
@@ -119,7 +122,7 @@ function Register() {
               placeholder="Enter phone number"
             />
           </div>
-          <div className="form-group">
+          <div className="login-form-group">
             <label>Username</label>
             <input
               type="text"
@@ -133,8 +136,8 @@ function Register() {
               <p className="error-text">{usernameError}</p>
             )}
           </div>
-          <div className="form-group">
-            <label className="align-password" >Password</label>
+          <div className="login-form-group">
+            <label className="align-password">Password</label>
             <div className="password-container">
               <input
                 type={showPassword ? "text" : "password"}
@@ -155,21 +158,25 @@ function Register() {
               <p className="error-text">{passwordError}</p>
             )}
           </div>
-          <button className="auth-register-button " type="submit">Sign Up</button>
-          <div  className="have-account"> <p>Already have and account?</p>
-          <button type="button " className=" login-text" onClick={() => console.log("Register clicked")}>
-            Log in
-          </button></div>
+          <button className="auth-register-button" type="submit">Sign Up</button>
+          <div className="have-account">
+            <p>Already have an account?</p>
+            <button
+              type="button"
+              className="login-text"
+              onClick={() => navigate('/login')} // Navigate to login page
+            >
+              Log in
+            </button>
+          </div>
         </form>
       </div>
+      <div className="login-bottom mobile" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+        <img className="login-bottom-arrow" src={backArrow} alt="back arrow" />
+        <p>Return to home</p>
+      </div>
       <RegisterBoard />
-      <div className="login-bottom mobile">
-          <p>
-            {" "}
-            <img className="login-bottom-arrow  " src={backArrow} alt="/" />
-            Return to home
-          </p>
-        </div>
+  
     </section>
   );
 }

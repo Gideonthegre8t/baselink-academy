@@ -6,12 +6,16 @@ function Navbar() {
 
   const handleClick = (event, id) => {
     event.preventDefault(); // Prevent default anchor behavior
+    const offset = 60; // Adjust this value according to the height of your fixed navbar or header
+
     if (id === "home") {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top of the page
     } else {
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" }); // Scroll to the element with given id
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
       }
     }
     setShowLinks(false); // Close the navbar after clicking a link
@@ -19,18 +23,15 @@ function Navbar() {
 
   return (
     <div className="navigator">
-      <nav className={`navbar links ${showLinks ? 'visible' : ''}`}>
+      <nav className={`navbar links ${showLinks ? "visible" : ""}`}>
         <a href="/#" onClick={(e) => handleClick(e, "home")}>
           Home
-        </a>
-        <a href="/#" onClick={(e) => handleClick(e, "course")}>
-          Courses
         </a>
         <a href="/#" onClick={(e) => handleClick(e, "about")}>
           About Us
         </a>
-        <a href="/#" onClick={(e) => handleClick(e, "testimonial")}>
-          Testimonials
+        <a href="/#" onClick={(e) => handleClick(e, "course")}>
+          Courses
         </a>
         <a href="/#" onClick={(e) => handleClick(e, "contact")}>
           Contact Us

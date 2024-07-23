@@ -2,19 +2,12 @@ import React from "react";
 import "../DashBoard/index.css";
 import trackEnrolIcon from "../../../src/assets/images/my-course.png";
 import verified from "../../../src/assets/images/verify.png";
-import logo from "../../assets/images/logo.png";
 import overview from "../../assets/images/overview.png"
 
 function Overview() {
   return (
     <section id="overview"> 
-    <div className=" overview-logo mobile">
-    <img src={logo} alt="logo" />
-            <p className="logo-text">
-              BaseLink <br />
-              Academy{" "}
-            </p>
-          </div> 
+   
 <div className="overview-prefix ">
   <img src={overview} alt="/" />
 <h4>Overview</h4>
@@ -47,7 +40,7 @@ function Overview() {
             Progress{" "}
           </p>
                     
-          <h3 className="mobile">00</h3>
+          <h3 className="progress-meter">00</h3>
           <div className="category-wrapper">
             <div className="category">
               <div className="progress-tab ">

@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { motion } from "framer-motion"; // Import framer-motion
 import logo from "../assets/images/logo.png";
 import image1 from "../assets/images/hand-on-mobile.png";
 import verifyIcon from "../assets/images/verify.png";
@@ -7,9 +9,35 @@ import headerBackground2 from "../assets/images/header-background2.png";
 import Navbar from "./Navbar";
 
 function Header() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleRegisterClick = () => {
+    navigate('/sign-up'); // Navigate to /sign-up route
+  };
+
+  const handleBrowseCoursesClick = () => {
+    navigate('/dashboard'); // Navigate to /dashboard route
+  };
+
+  const handleLoginClick = () => {
+    navigate('/login'); // Navigate to /login route
+  };
+
+  const buttonVariants = {
+    hover: {
+      scale: 1.1,
+      boxShadow: "0px 0px 8px rgb(255, 255, 255)",
+      transition: {
+        yoyo: Infinity,
+      },
+    },
+    click: {
+      scale: 0.9,
+    },
+  };
+
   return (
     <header id="home">
-    
       <div className="header-wrapper">
         <div className="header-top">
           <div className="logo-wrap">
@@ -20,7 +48,15 @@ function Header() {
             </p>
           </div>
           <Navbar />
-          <button className="register-button desktop">Register</button>
+          <motion.button
+            className="register-button desktop"
+            onClick={handleRegisterClick}
+            variants={buttonVariants}
+            whileHover="hover"
+            whileTap="click"
+          >
+            Register
+          </motion.button>
         </div>
         <div className="header-content">
           <div className="header-content-left">
@@ -32,8 +68,24 @@ function Header() {
               our robust and user-friendly online learning platform
             </p>
             <div className="header-bottom">
-              <button className="browse-button">Browse courses</button>
-              <button className="sign-up-button">Sign up</button>
+              <motion.button
+                className="browse-button"
+                onClick={handleBrowseCoursesClick}
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="click"
+              >
+                Browse courses
+              </motion.button>
+              <motion.button
+                className="sign-up-button login-button"
+                onClick={handleLoginClick}
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="click"
+              >
+                Login
+              </motion.button>
             </div>
             <p className="coach-text desktop">
               <img className="verifyIcon" src={verifyIcon} alt="verify-icon" />

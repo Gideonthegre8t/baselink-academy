@@ -1,5 +1,4 @@
 import React from "react";
-import logoLarge from "../assets/images/logo-large.png";
 import logo from "../assets/images/logo.png";
 import facebook from "../assets/images/facebook.png";
 import instagram from "../assets/images/instagram.png";
@@ -14,8 +13,7 @@ function Footer() {
         {" "}
         <div className="footer-top-wrapper">
           <div className="footer-logo-wrap">
-            <img className="logo-large desktop" src={logoLarge} alt="logo" />
-            <img className="logo mobile" src={logo} alt="logo" />
+            <img className="logo" src={logo} alt="logo" />
             <p>
               BaseLink <br />
               Academy{" "}

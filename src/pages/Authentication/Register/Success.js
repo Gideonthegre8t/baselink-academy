@@ -4,7 +4,7 @@ import success from "../../../assets/images/finished.png";
 
 function Success() {
   return (
-    <section>
+    <section id="success">
       <div className="success-wrapper">
         <h2>Welcome to Baselink Academy</h2>
         <div className="success-content">
