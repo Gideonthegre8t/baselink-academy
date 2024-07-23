@@ -1395,7 +1395,7 @@ button:focus {
   }
 
   .testimony-wrapper {
-    margin-top: 79em;
+    margin-top: 84em;
     padding-bottom: 4em;
   }
 
@@ -1403,6 +1403,15 @@ button:focus {
     margin-left: -41%;
   }
 }
+
+
+
+@media only screen and (width < 460px){
+.testimony-wrapper{
+  margin-top: 71em;
+}
+}
+
 
 @media only screen and (width < 381px) {
   .header-content-left > h1 {
@@ -1500,5 +1509,9 @@ button:focus {
   .stamp {
     width: 100%;
     margin: 0 auto;
+  }
+
+  li{
+    margin-left: 3em;
   }
 }
