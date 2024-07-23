@@ -796,7 +796,7 @@ button:focus {
 
   .about-icon {
     position: absolute;
-    margin-left: 5.8em;
+    margin-left: -2em;
   }
 
   .header-background2 {
