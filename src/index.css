@@ -963,6 +963,10 @@ button:focus {
     text-align: left;
   }
 
+  .navbar.links a:hover{
+    color: black;
+  }
+
   .nav-btn {
     display: flex;
     position: fixed;
