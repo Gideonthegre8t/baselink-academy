@@ -176,11 +176,11 @@ body {
 
 .track-icon {
   position: absolute;
-  margin-left: -1em;
+  margin-left: -2em;
 }
 
 .progress-icon {
-  margin-left: 0.7em;
+  margin-left: -2em;
 }
 .progress-details {
   margin: 0 auto;
@@ -191,8 +191,7 @@ body {
 
 .dashboard-verified {
   position: absolute;
-  margin-top: -1.7em;
-  margin-left: 4em;
+  margin-top: -0.6em;
 }
 
 .progress-tab {
@@ -293,11 +292,13 @@ ul li::marker {
 
 .course-icon {
   position: absolute;
-  margin-left: -2em;
+  margin-left: -8em;
 }
+
+
 .pd-course-icon {
   position: absolute;
-  margin-left: -2em;
+  margin-left: -8em;
 }
 
 .course-line {
@@ -376,11 +377,11 @@ ul li::marker {
 
 .my-course-icon {
   position: absolute;
-  margin-left: -2em;
+  margin-left: -8em;
 }
 .completed-course-icon {
   position: absolute;
-  margin-left: -30px;
+  margin-left: -8em;
 }
 
 .my-course-top {
@@ -601,11 +602,11 @@ input {
     gap: 0em;
   }
   .track-icon {
-    margin-left: -1em;
+    margin-left: -2em;
   }
 
   .progress-icon {
-    margin-left: 0.7em;
+    margin-left: -2em;
   }
 
   .progress-meter {
@@ -653,13 +654,15 @@ input {
     margin-left: -2.5em;
   }
 
-  .my-course-icon {
+  .course-icon,  .pd-course-icon{
+    margin-left: -9%;
+  }
+
+  .my-course-icon,   .completed-course-icon  {
     position: absolute;
-    margin-left: -30px;
+    margin-left: -9%;
   }
-  .completed-course-icon {
-    margin-left: -30px;
-  }
+ 
 
   .enroll {
     width: 120px;
@@ -770,14 +773,14 @@ input {
   }
   .track-icon {
     position: absolute;
-    margin-left: -7px;
+    margin-left: -21px;
   }
 
   .recommended-icon {
     margin-left: -2em;
   }
   .progress-icon {
-    margin-left: 0.7em;
+    margin-left: -1.5em;
   }
 
   .course-title > p {
@@ -799,13 +802,7 @@ input {
     margin-left: 0px;
   }
 
-  .my-course-icon {
-    position: absolute;
-    margin-left: -30px;
-  }
-  .completed-course-icon {
-    margin-left: -30px;
-  }
+  
 
   .enroll {
     position: relative;
@@ -895,11 +892,11 @@ input {
   }
 
   .track-icon {
-    margin-left: -1em;
+    margin-left: -2em;
   }
 
   .progress-icon {
-    margin-left: 0px;
+    margin-left: -2em;
   }
 
   .track-detail-card > p {
@@ -1024,22 +1021,17 @@ input {
     width: 100%;
     margin-top: -8px;
   }
-
-  .course-icon {
-    margin-left: 1em;
+  .course-icon,  .pd-course-icon{
+    margin-left: -18%;
   }
 
-  .pd-course-icon {
-    margin-left: 15px;
+
+   .my-course-icon,  .completed-course-icon{
+    margin-left: -14%;
   }
 
-  .my-course-icon {
-    position: absolute;
-    margin-left: 5px;
-  }
-  .completed-course-icon {
-    margin-left: -10px;
-  }
+
+
 
   .enroll {
     width: 100px;
@@ -1131,6 +1123,12 @@ input {
   .country {
     margin-left: -29%;
   }
+
+  .overview-prefix > img {
+    margin-left: -18%;
+
+  }
+
 }
 
 @media only screen and (width < 460px) {
@@ -1192,6 +1190,8 @@ input {
     margin-right: -5%;
   }
 
+  
+
   .course-icon {
     margin-left: -18px;
     width: 3%;
@@ -1223,13 +1223,12 @@ input {
   }
 
   .my-course-icon {
-    position: absolute;
-    margin-left: -5px;
+    margin-left: -15%;
     max-width: 3%;
   }
   .completed-course-icon {
-    position: absolute;
-    margin-left: -10px;
+
+    margin-left: -14%;
     max-width: 3%;
   }
 
@@ -1264,9 +1263,7 @@ input {
     height: 32px;
   }
 
-  .overview-prefix > img {
-    margin-left: 28%;
-  }
+ 
 
   .personal-information,
   .contact-information {
@@ -1281,6 +1278,9 @@ input {
   .user-info-label {
     margin-left: -11em;
   }
+
+ 
+
 }
 
 @media only screen and (width < 450px) {
@@ -1344,15 +1344,12 @@ input {
     margin-left: -2em;
   }
 
-  .my-course-icon {
+  .my-course-icon,  .completed-course-icon {
     max-width: 5%;
-    margin-left: -25px;
+    margin-left: -10%;
   }
 
-  .completed-course-icon {
-    margin-left: -1.5em;
-    max-width: 5%;
-  }
+  
 
   .my-course-content-top {
     padding: 0;
@@ -1372,7 +1369,7 @@ input {
   }
 
   .overview-prefix > img {
-    margin-left: 25%;
+    margin-left: -30%;
   }
 
   .login-form-group {
@@ -1415,5 +1412,10 @@ input {
 
   .save-changes {
     margin: 0 auto;
+  }
+  .overview-prefix > img {
+    margin-left: -23%;
+    margin-top: -1px;
+
   }
 }

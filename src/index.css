@@ -38,7 +38,6 @@ body {
 
 img {
   max-width: 100%;
-  max-height: auto;
 }
 
 .header-top {
@@ -641,7 +640,7 @@ button:focus {
     font-size: 13px;
   }
 
-  .login-bottom > .signin-bottom-arrow{
+  .login-bottom > .signin-bottom-arrow {
     margin-left: -5em;
   }
 }
@@ -1337,7 +1336,11 @@ button:focus {
     max-width: 80%;
   }
   .footer-logo-wrap {
-    margin-left: 3em;
+    margin-left: 40%;
+  }
+
+  .footer-logo-wrap > img {
+    margin-left: -38%;
   }
 
   .socials > p {
@@ -1390,8 +1393,12 @@ button:focus {
   }
 
   .testimony-wrapper {
-    margin-top: 75em;
+    margin-top: 79em;
     padding-bottom: 4em;
+  }
+
+  .footer-logo-wrap > img {
+    margin-left: -41%;
   }
 }
 
