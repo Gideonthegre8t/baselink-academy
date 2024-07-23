@@ -368,7 +368,6 @@ p {
     position: absolute;
     margin-left: -5em;
     margin-top: -10px;
-
     max-width: 100%;
   }
 
@@ -626,7 +625,7 @@ p {
   }
 
   .password-container > img {
-    margin-top: 6%;
+    margin-top:9%;
   }
 
   .login-form-group > label {
@@ -634,6 +633,9 @@ p {
   }
   .login-bottom-arrow {
     margin-left: -8%;
+  }
+  .login-bottom{
+    margin-left: 4em;
   }
 }
 
@@ -668,7 +670,7 @@ p {
     position: absolute;
     cursor: pointer;
     left: 79%;
-    margin-top: 7%;
+    margin-top: 10%;
   }
 
   .login-form-group {
@@ -690,6 +692,8 @@ p {
     position: absolute;
     margin-left: -9%;
   }
+
+
 }
 
 @media only screen and (width < 340px) {
@@ -713,6 +717,7 @@ p {
     margin-top: 11%;
   }
   
+
 }
 
 
