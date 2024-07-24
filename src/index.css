@@ -1306,6 +1306,11 @@ button:focus {
     margin-top: 1em;
   }
 
+  .footer-top-wrapper{
+    padding-top: 2em;
+  }
+
+
   .footer-logo-wrap > p {
     font-family: "Inknut Antiqua";
     font-size: 16px;
@@ -1337,6 +1342,7 @@ button:focus {
   .handles {
     display: flex;
     justify-content: center;
+
   }
   .stamp {
     margin: 3em;
@@ -1346,6 +1352,8 @@ button:focus {
   .header-bottom {
     max-width: 80%;
   }
+
+  
   .footer-logo-wrap {
     margin-left: 40%;
   }
@@ -1397,7 +1405,10 @@ button:focus {
 
   .logo-wrap {
     margin-left: -1em;
+ 
   }
+
+
 
   .course-card {
     padding: 2em;
@@ -1407,10 +1418,11 @@ button:focus {
     margin-top: 84em;
     padding-bottom: 4em;
   }
-
+  
   .footer-logo-wrap > img {
-    margin-left: -41%;
+    margin-left: -38%;
   }
+
 }
 
 
@@ -1418,6 +1430,11 @@ button:focus {
 @media only screen and (width < 460px){
 .testimony-wrapper{
   margin-top: 71em;
+}
+
+
+.footer-logo-wrap > img {
+  margin-left: -40%;
 }
 }
 
@@ -1520,8 +1537,22 @@ button:focus {
     margin: 0 auto;
   }
 
+  .contact{
+    margin-left: -1em;
+  }
+
   li{
     margin-left: 3em;
+  }
+
+  .contact { 
+    width: 50%;
+    margin-left: 1em;
+  }
+
+  
+  .footer-logo-wrap > img {
+    margin-left: -43%;
   }
  
 }
