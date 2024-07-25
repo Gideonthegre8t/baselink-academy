@@ -637,6 +637,12 @@ input {
     margin-left: 5em;
   }
 
+  
+  .browse-content-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .browse-content-card {
     width: 75%;
   }

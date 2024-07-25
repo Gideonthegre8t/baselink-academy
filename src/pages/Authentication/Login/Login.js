@@ -58,6 +58,8 @@ function Login() {
           </div>
       <div className="login-wrapper">
         <h2>Welcome to Baselink Academy</h2>
+        <h4>Enter Username:Gideon </h4>
+        <h4>Password: Baselink@0123</h4>
         <p>{message}</p>
         <form className="registration-form" onSubmit={handleSubmit}>
           <div className="login-form-group">
