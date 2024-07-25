@@ -33,7 +33,7 @@ function Login() {
 
     if (form.username === validUsername && form.password === validPassword) {
       setMessage("Login successful!");
-      navigate('/dashboard'); // Redirect to home page on success
+      navigate('/dashboard'); // Redirect to home page on  success
     } else {
       setMessage("Incorrect username or password.");
     }
