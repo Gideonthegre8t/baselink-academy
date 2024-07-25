@@ -18,6 +18,7 @@ import QandA from "./QandA";
 function UserDashboard() {
   const [activeComponent, setActiveComponent] = useState("Overview");
   const [scrollToRef, setScrollToRef] = useState(null);
+  const [enrolledCount, setEnrolledCount] = useState(0);
   const navigate = useNavigate();
 
   const overviewRef = useRef(null);
@@ -25,6 +26,10 @@ function UserDashboard() {
   const myCoursesRef = useRef(null);
   const userInformationRef = useRef(null);
   const qAndARef = useRef(null);
+
+  const updateOverview = (count) => {
+    setEnrolledCount(count);
+  };
 
   useEffect(() => {
     if (scrollToRef) {
@@ -133,12 +138,12 @@ function UserDashboard() {
       <div className="render">
         {activeComponent === "Overview" && (
           <div ref={overviewRef}>
-            <Overview />
+            <Overview enrolledCount={enrolledCount} />
           </div>
         )}
         {activeComponent === "BrowseCourse" && (
           <div ref={browseCourseRef}>
-            <BrowseCourse />
+            <BrowseCourse updateOverview={updateOverview} />
           </div>
         )}
         {activeComponent === "MyCourses" && (

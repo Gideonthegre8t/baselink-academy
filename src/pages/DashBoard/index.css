@@ -281,6 +281,7 @@ ul li::marker {
   width: 20%;
   height: 22px;
   margin-top: 1em;
+  cursor: pointer;
 }
 
 .course-title > p {
@@ -333,7 +334,7 @@ ul li::marker {
   display: flex;
   justify-content: space-around;
   width: 70%;
-  margin-left: 2em;
+  margin-left: 2.8em;
   padding-bottom: 3em;
 }
 
@@ -668,7 +669,7 @@ input {
 
   .course-icon,
   .pd-course-icon {
-    margin-left: -9%;
+    margin-left: -6%;
   }
 
   .my-course-icon,

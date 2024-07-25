@@ -2,21 +2,19 @@ import React from "react";
 import "../DashBoard/index.css";
 import trackEnrolIcon from "../../../src/assets/images/my-course.png";
 import verified from "../../../src/assets/images/verify.png";
-import overview from "../../assets/images/overview.png"
+import overview from "../../assets/images/overview.png";
 
-function Overview() {
+function Overview({ enrolledCount }) {
   return (
-    <section id="overview"> 
-   
-<div className="overview-prefix ">
-  <img src={overview} alt="/" />
-<h4>Overview</h4>
-</div>
-         
+    <section id="overview">
+      <div className="overview-prefix">
+        <img src={overview} alt="/" />
+        <h4>Overview</h4>
+      </div>
+
       <div className="overview-wrapper">
-        <div className="overview-header ">
-          {" "}
-          <h2>Welcome,Gideon!</h2>
+        <div className="overview-header">
+          <h2>Welcome, Gideon!</h2>
           <p>Here's what we have for you</p>
         </div>
       </div>
@@ -26,11 +24,10 @@ function Overview() {
             <img className="track-icon" src={trackEnrolIcon} alt="/" />
             Enrolled courses{" "}
           </p>
-          <h3>00</h3>
+          <h3>{enrolledCount}</h3>
         </div>
 
         <div className="track-detail-card">
-
           <p>
             <img
               className="track-icon progress-icon"
@@ -39,14 +36,14 @@ function Overview() {
             />
             Progress{" "}
           </p>
-                    
-          <h3 className="progress-meter">00</h3>
+
+          <h3 className="progress-meter">{enrolledCount * 10}</h3>
           <div className="category-wrapper">
             <div className="category">
-              <div className="progress-tab ">
-                <div className="progress-details ">
-                  <p >
-                    Stater...
+              <div className="progress-tab">
+                <div className="progress-details">
+                  <p>
+                    Starter...
                     <img
                       className="dashboard-verified"
                       src={verified}
