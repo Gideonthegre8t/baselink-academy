@@ -72,7 +72,7 @@ function Header() {
                 whileHover="hover"
                 whileTap="click"
               >
-                Courses
+                Browse courses
               </motion.button>
               <motion.button
                 className="sign-up-button login-button"
