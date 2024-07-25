@@ -5,6 +5,14 @@ import verified from "../../../src/assets/images/verify.png";
 import overview from "../../assets/images/overview.png";
 
 function Overview({ enrolledCount }) {
+  // Calculate progress percentages for each category
+  const starterCourses = enrolledCount ; // Number of starter courses (example value)
+  const certifiedCourses = enrolledCount ; // Number of certified courses (example value)
+  
+  // These can be dynamic based on actual data
+  const totalCourses = starterCourses +  certifiedCourses;
+  const progress = Math.min((enrolledCount / totalCourses) * 100, 100); // Calculate progress percentage
+  
   return (
     <section id="overview">
       <div className="overview-prefix">
@@ -37,7 +45,7 @@ function Overview({ enrolledCount }) {
             Progress{" "}
           </p>
 
-          <h3 className="progress-meter">{enrolledCount * 10}</h3>
+          <h3 className="progress-meter">{progress.toFixed(0)}%</h3>
           <div className="category-wrapper">
             <div className="category">
               <div className="progress-tab">
@@ -50,7 +58,7 @@ function Overview({ enrolledCount }) {
                       alt=""
                     />{" "}
                   </p>
-                  <p>2 courses</p>
+                  <p>{starterCourses} courses</p>
                 </div>
                 <div className="progress-details mobile">
                   <p>
@@ -61,7 +69,7 @@ function Overview({ enrolledCount }) {
                       alt=""
                     />{" "}
                   </p>
-                  <p>2 courses</p>
+
                 </div>
                 <div className="progress-details">
                   <p>
@@ -72,7 +80,7 @@ function Overview({ enrolledCount }) {
                       alt=""
                     />{" "}
                   </p>
-                  <p>2 courses</p>
+                  <p>{certifiedCourses} courses</p>
                 </div>
               </div>
             </div>

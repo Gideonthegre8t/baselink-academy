@@ -52,42 +52,36 @@ function BrowseCourse({ updateOverview }) {
   return (
     <section id="browse-course" className="browse-course">
       <div className="overview-prefix prefix">
-        <img src={browseCourse} alt="/" />
+        <img src={browseCourse} alt="Browse Course" />
         <h4>My courses</h4>
       </div>
       <div className="browse-course-wrapper">
         <div className="browse-course-header">
           <h2>Welcome, Gideon!</h2>
         </div>
-        <p className="note">For any question regarding any course please send a question in the Q & A section</p>
+        <p className="note">For any questions regarding any course, please send a question in the Q & A section</p>
 
         <div className="browse-course-content">
           <div className="browse-content-top">
-            <div className="course-title" onClick={() => handleCourseClick("Creative")}>
-              <img className="course-icon" src={courseIcon} alt="/" />
-              <p>Creative courses</p>
-            </div>
-            <div className="course-title" onClick={() => handleCourseClick("Technical")}>
-              <img className="course-icon" src={courseIcon} alt="/" />
-              <p>Technical courses</p>
-            </div>
-            <div className="course-title" onClick={() => handleCourseClick("Business")}>
-              <img className="course-icon" src={courseIcon} alt="/" />
-              <p>Business courses</p>
-            </div>
-            <div className="course-title" onClick={() => handleCourseClick("PersonalDevelopment")}>
-              <img className="pd-course-icon" src={courseIcon} alt="/" />
-              <p>Personal development courses</p>
-            </div>
+            {Object.keys(coursesData).map((courseType) => (
+              <div
+                key={courseType}
+                className={`course-title ${activeCourse === courseType ? 'active' : ''}`}
+                onClick={() => handleCourseClick(courseType)}
+              >
+                <img className="course-icon" src={courseIcon} alt={courseType} />
+                <p>{courseType.replace(/([A-Z])/g, ' $1').trim()} courses</p>
+              </div>
+            ))}
           </div>
           <div className="course-line"></div>
 
           <div className="browse-content-bottom">
             <div className="browse-card-title">
-              <p>Courses description</p>
+              <p>Course Description</p>
               <p>Syllabus</p>
-              <p className="desktop">Reading material url</p>
-              <p className="desktop">Tutorial videos url</p>
+              <p className="desktop">Reading Material URL</p>
+              <p className="desktop">Tutorial Videos URL</p>
             </div>
             <div className="course-line2"></div>
 
@@ -97,7 +91,10 @@ function BrowseCourse({ updateOverview }) {
                 <p>{course.syllabus}</p>
                 <p className="desktop">{course.readingMaterial}</p>
                 <p className="desktop">{course.tutorialVideos}</p>
-                <p className="enroll" onClick={() => handleEnroll(course.name)}>
+                <p
+                  className="enroll"
+                  onClick={() => handleEnroll(course.name)}
+                >
                   {enrolledCourses.includes(course.name) ? "Remove" : "Enroll"}
                 </p>
               </div>
