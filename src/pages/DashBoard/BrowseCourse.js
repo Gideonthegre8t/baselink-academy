@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import courseIcon from "../../assets/images/my-course.png";
-import "../DashBoard/index.css";
 import browseCourse from "../../../src/assets/images/search.png";
+import "../DashBoard/index.css";
 
 function BrowseCourse({ updateOverview }) {
   const [activeCourse, setActiveCourse] = useState("Creative");
@@ -30,16 +30,23 @@ function BrowseCourse({ updateOverview }) {
     ]
   };
 
+  useEffect(() => {
+    const storedCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+    setEnrolledCourses(storedCourses);
+    updateOverview(storedCourses.length);
+  }, [updateOverview]);
+
   const handleCourseClick = (courseType) => {
     setActiveCourse(courseType);
   };
 
   const handleEnroll = (courseName) => {
-    if (!enrolledCourses.includes(courseName)) {
-      const newEnrolledCourses = [...enrolledCourses, courseName];
-      setEnrolledCourses(newEnrolledCourses);
-      updateOverview(newEnrolledCourses.length);
-    }
+    const newEnrolledCourses = enrolledCourses.includes(courseName)
+      ? enrolledCourses.filter(course => course !== courseName)
+      : [...enrolledCourses, courseName];
+    setEnrolledCourses(newEnrolledCourses);
+    localStorage.setItem("enrolledCourses", JSON.stringify(newEnrolledCourses));
+    updateOverview(newEnrolledCourses.length);
   };
 
   return (
@@ -49,7 +56,7 @@ function BrowseCourse({ updateOverview }) {
         <h4>My courses</h4>
       </div>
       <div className="browse-course-wrapper">
-        <div className="browse-course-header ">
+        <div className="browse-course-header">
           <h2>Welcome, Gideon!</h2>
         </div>
         <p className="note">For any question regarding any course please send a question in the Q & A section</p>
@@ -58,19 +65,19 @@ function BrowseCourse({ updateOverview }) {
           <div className="browse-content-top">
             <div className="course-title" onClick={() => handleCourseClick("Creative")}>
               <img className="course-icon" src={courseIcon} alt="/" />
-              <p style={{ color: activeCourse === "Creative" ? "black" : "inherit" }}>Creative courses</p>
+              <p>Creative courses</p>
             </div>
             <div className="course-title" onClick={() => handleCourseClick("Technical")}>
               <img className="course-icon" src={courseIcon} alt="/" />
-              <p style={{ color: activeCourse === "Technical" ? "black" : "inherit" }}>Technical courses</p>
+              <p>Technical courses</p>
             </div>
             <div className="course-title" onClick={() => handleCourseClick("Business")}>
               <img className="course-icon" src={courseIcon} alt="/" />
-              <p style={{ color: activeCourse === "Business" ? "black" : "inherit" }}>Business courses</p>
+              <p>Business courses</p>
             </div>
             <div className="course-title" onClick={() => handleCourseClick("PersonalDevelopment")}>
               <img className="pd-course-icon" src={courseIcon} alt="/" />
-              <p style={{ color: activeCourse === "PersonalDevelopment" ? "black" : "inherit" }}>Personal development courses</p>
+              <p>Personal development courses</p>
             </div>
           </div>
           <div className="course-line"></div>
@@ -91,7 +98,7 @@ function BrowseCourse({ updateOverview }) {
                 <p className="desktop">{course.readingMaterial}</p>
                 <p className="desktop">{course.tutorialVideos}</p>
                 <p className="enroll" onClick={() => handleEnroll(course.name)}>
-                  {enrolledCourses.includes(course.name) ? "Enrolled" : "Enroll"}
+                  {enrolledCourses.includes(course.name) ? "Remove" : "Enroll"}
                 </p>
               </div>
             ))}

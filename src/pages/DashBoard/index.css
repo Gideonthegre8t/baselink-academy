@@ -534,9 +534,12 @@ input {
 
 .dashboard-item-card.active-card {
   background-color: #021f3d;
-  color: white; /* Optional: change text color to white for better contrast */
+  color: white;
 }
 
+.browse-content-card .enroll {
+  cursor: pointer;
+}
 
 @media only screen and (width > 1440px) {
   .browse-course-header {
