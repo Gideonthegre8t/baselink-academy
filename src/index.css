@@ -654,7 +654,7 @@ button:focus {
 
 @media only screen and (width > 600px) and (width < 1245px) {
   .logo-wrap {
-    margin-left: 10%;
+    margin-left: 10%!;
   }
 
   .logo-wrap {
@@ -702,6 +702,10 @@ button:focus {
   font-size: 14px;
     width:180px;
 line-height: 13px;
+  }
+
+  .login-button{
+    font-size: 14px;
   }
 
   .sign-up-button {
