@@ -75,7 +75,7 @@ function Header() {
                 Browse courses
               </motion.button>
               <motion.button
-                className="sign-up-button login-button"
+                className="header-login"
                 onClick={handleLoginClick}
                 variants={buttonVariants}
                 whileHover="hover"

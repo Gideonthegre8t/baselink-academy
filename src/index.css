@@ -173,6 +173,20 @@ button:focus {
   background: #021f3d;
   color:#fff
 }
+
+.sign-up-button,.header-login {
+  width: 162px;
+  height: 55px;
+  padding: 12px;
+  border-radius: 5px;
+  font-family: Arial;
+  font-weight: 700;
+  line-height: 23px;
+  color: #fff;
+  background: #007bff;
+  border: none;
+}
+
 @media only screen and (width > 1450px) {
   .navigator {
     width: 60%;
@@ -358,31 +372,21 @@ button:focus {
     gap: 2em;
   }
 
+ 
+
   .browse-button {
     width: 205px;
     height: 55px;
-    padding: 12px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #007bff;
     font-family: Arial;
     font-size: 20px;
     font-weight: 700;
-    line-height: 23px;
+    line-height: 18px;
   }
 
-  .sign-up-button {
-    width: 162px;
-    height: 55px;
-    padding: 12px;
-    border-radius: 5px;
-    font-family: Arial;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 23px;
-    color: #fff;
-    background: #007bff;
-    border: none;
-  }
+
 
   .coach-text {
     text-align: left;
@@ -654,14 +658,13 @@ button:focus {
 
 @media only screen and (width > 600px) and (width < 1245px) {
   .logo-wrap {
-    margin-left: 10%!;
+    margin-left: 10%
   }
 
-  .logo-wrap {
-    img {
+  .logo-wrap > img {
       margin-left: -2.5em;
     }
-  }
+  
 
   .navigator {
     display: block;
@@ -704,13 +707,15 @@ button:focus {
 line-height: 13px;
   }
 
-  .login-button{
-    font-size: 14px;
-  }
+
 
   .sign-up-button {
     font-size: 12px;
     width: 100px;
+  }
+
+  .header-login{
+  font-size: 14px;
   }
 
   .header-content {
@@ -1126,12 +1131,14 @@ line-height: 13px;
     color: #021f3d;
   }
 
-  .sign-up-button {
+  .sign-up-button,.header-login {
     width: 100px;
-    background: #007bff;
-    border: 0;
-    border-radius: 5px;
+    height: 43px;
+    padding: 9px;
+    font-size: 12px;
   }
+
+
 
   .about-wrapper {
     margin-top: 6em;
