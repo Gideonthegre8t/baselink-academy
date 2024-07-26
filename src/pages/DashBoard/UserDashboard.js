@@ -19,6 +19,7 @@ function UserDashboard() {
   const [activeComponent, setActiveComponent] = useState("Overview");
   const [scrollToRef, setScrollToRef] = useState(null);
   const [enrolledCount, setEnrolledCount] = useState(0);
+  const [enrolledCourses, setEnrolledCourses] = useState([]); // New state for enrolled courses
   const navigate = useNavigate();
 
   const overviewRef = useRef(null);
@@ -143,12 +144,16 @@ function UserDashboard() {
         )}
         {activeComponent === "BrowseCourse" && (
           <div ref={browseCourseRef}>
-            <BrowseCourse updateOverview={updateOverview} />
+            <BrowseCourse 
+              updateOverview={updateOverview} 
+              enrolledCourses={enrolledCourses}
+              setEnrolledCourses={setEnrolledCourses} // Pass the setter to BrowseCourse
+            />
           </div>
         )}
         {activeComponent === "MyCourses" && (
           <div ref={myCoursesRef}>
-            <MyCourses />
+            <MyCourses enrolledCourses={enrolledCourses} /> 
           </div>
         )}
         {activeComponent === "UserInfomation" && (

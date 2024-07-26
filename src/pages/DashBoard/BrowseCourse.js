@@ -3,9 +3,8 @@ import courseIcon from "../../assets/images/my-course.png";
 import browseCourse from "../../../src/assets/images/search.png";
 import "../DashBoard/index.css";
 
-function BrowseCourse({ updateOverview }) {
+function BrowseCourse({ updateOverview, enrolledCourses, setEnrolledCourses }) {
   const [activeCourse, setActiveCourse] = useState("Creative");
-  const [enrolledCourses, setEnrolledCourses] = useState([]);
 
   const coursesData = {
     Creative: [
@@ -34,7 +33,7 @@ function BrowseCourse({ updateOverview }) {
     const storedCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
     setEnrolledCourses(storedCourses);
     updateOverview(storedCourses.length);
-  }, [updateOverview]);
+  }, [setEnrolledCourses, updateOverview]);
 
   const handleCourseClick = (courseType) => {
     setActiveCourse(courseType);
@@ -52,7 +51,7 @@ function BrowseCourse({ updateOverview }) {
   return (
     <section id="browse-course" className="browse-course">
       <div className="overview-prefix prefix">
-        <img src={browseCourse} alt="Browse Course" />
+        <img src={browseCourse} alt="/" />
         <h4>My courses</h4>
       </div>
       <div className="browse-course-wrapper">
@@ -66,10 +65,10 @@ function BrowseCourse({ updateOverview }) {
             {Object.keys(coursesData).map((courseType) => (
               <div
                 key={courseType}
-                className={`course-title ${activeCourse === courseType ? 'active' : ''}`}
+                className="course-title"
                 onClick={() => handleCourseClick(courseType)}
               >
-                <img className="course-icon" src={courseIcon} alt={courseType} />
+                <img className="course-icon" src={courseIcon} alt="/" />
                 <p>{courseType.replace(/([A-Z])/g, ' $1').trim()} courses</p>
               </div>
             ))}
