@@ -334,8 +334,8 @@ ul li::marker {
   display: flex;
   justify-content: space-around;
   width: 70%;
-  margin-left: 2.8em;
-  padding-bottom: 3em;
+  margin-left: 4.5em;
+  padding-bottom: 1em;
 }
 
 .course-name {
@@ -594,6 +594,10 @@ input {
 }
 
 @media only screen and (width < 1245px) {
+.desktop{
+  display: none;
+}
+
   .logo {
     position: absolute;
     width: 36px;
@@ -635,10 +639,10 @@ input {
     margin-left: -1.6em;
   }
 
-  .browse-card-title {
-    width: 60%;
-    gap: 3em;
-    margin-left: 5em;
+  .browse-card-title >p { 
+    width: 100%;
+
+ margin-left: -3em;
   }
 
   
@@ -658,6 +662,11 @@ input {
 
   .course-title > p {
     font-size: 12px;
+  }
+
+  .browse-card-title {
+    margin-left: 7em;
+    padding-bottom: 1em;
   }
 
   .browse-content-card > p,
@@ -809,22 +818,27 @@ input {
   }
 
   .browse-card-title {
-    gap: 0em;
-    margin-left: 0px;
-    width: 50%;
+    gap: 5em;
   }
 
+  .browse-card-title >p { 
+    width: 50%;
+ margin-left: -12em;
+  }
+
+
   .browse-content-card {
-    gap: 1em;
-    margin-left: 0px;
+    gap:1em;
+    margin-left:2em;
   }
 
   .enroll {
     position: relative;
-    width: 50px;
+    width: 80px;
     height: 29px;
     margin-left: 30%;
-    padding: 6px 9px;
+    padding: 9px 9px;
+    text-align: center;
   }
 
   .personal-information,
@@ -1010,8 +1024,9 @@ input {
     width: 100%;
   }
 
-  .browse-card-title {
-    margin-left: -1em;
+  .browse-card-title >p { 
+    width: 50%;
+ margin-left: -9em;
   }
 
   .browse-content-top {
@@ -1215,9 +1230,9 @@ input {
     margin-left: -8px;
     width: 3%;
   }
-
-  .browse-card-title > p {
+  .browse-card-title >p { 
     line-height: 15px;
+ margin-left: 3em;
   }
 
   .browse-card-title {
@@ -1302,7 +1317,7 @@ input {
     padding: none;
     gap: 1em;
     margin: 0 auto;
-    margin-left: 2em;
+    margin-left: 3em;
   }
 
   .course-title {
@@ -1421,8 +1436,12 @@ input {
     margin: 0 auto;
   }
   .overview-prefix > img {
-    margin-left: -23%;
+    margin-left: -25%;
     margin-top: -1px;
+  }
+
+  .browse-content-top {
+    margin-left: 1.6em;
   }
 }
 
@@ -1433,5 +1452,23 @@ input {
 
   form {
     gap: 8em;
+  }
+
+  .browse-card-title >p { 
+    line-height: 15px;
+ margin-left: 4em;
+  }
+
+  .enroll{
+    width: 60px;
+padding-left: 10px;  }
+
+}
+
+
+@media only screen and (width < 341px) {
+  .browse-card-title >p { 
+    line-height: 15px;
+ margin-left: 3em;
   }
 }
